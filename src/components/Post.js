@@ -25,23 +25,23 @@ function CorpoPost(props) {
     return (
         <>
             <div class="conteudo">
-                <img src={imgPost} alt={props.conteudo} onClick={() => {if(curtir === "heart-outline") setCurtir("heart")}}/>
+                <img src={imgPost} alt={props.conteudo} data-test="post-image" onClick={() => {if(curtir === "heart-outline") setCurtir("heart")}}/>
             </div>
             <div class="fundo">
                 <div class="acoes">
                     <div>
-                        <ion-icon name={curtir} onClick={curtirPost} color={(curtir === "heart") ? "danger" : "dark"}></ion-icon>
+                        <ion-icon name={curtir} data-test="like-post" onClick={curtirPost} color={(curtir === "heart") ? "danger" : "dark"}></ion-icon>
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
                     </div>
                     <div>
-                        <ion-icon name={salvar} onClick={salvarPost}></ion-icon>
+                        <ion-icon data-test="save-post" name={salvar} onClick={salvarPost}></ion-icon>
                     </div>
                 </div>
                 <div class="curtidas">
                     <img src={imgCurtidas} alt={props.nomeCurtidas} />
                     <div class="texto">
-                        Curtido por <strong>{props.nomeCurtidas}</strong> e <strong>outras {(curtir === "heart") ? (props.qtdCurtidas+1).toLocaleString("pt-br") : props.qtdCurtidas.toLocaleString("pt-br") } pessoas</strong>
+                        Curtido por <strong>{props.nomeCurtidas}</strong> e <strong>outras <strong data-test="likes-number">{(curtir === "heart") ? (props.qtdCurtidas+1).toLocaleString("pt-br") : props.qtdCurtidas.toLocaleString("pt-br") }</strong> pessoas</strong>
                     </div>
                 </div>
             </div>
@@ -67,7 +67,7 @@ function Topo(props) {
 
 export default function Post(props) {
     return (
-        <div class="post">
+        <div class="post" data-test="post">
             <Topo nomePerfil={props.nomePerfil} />
             <CorpoPost conteudo={props.conteudo} nomeCurtidas={props.nomeCurtidas} qtdCurtidas={props.qtdCurtidas} />
         </div>
