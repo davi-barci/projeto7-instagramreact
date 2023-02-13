@@ -5,6 +5,7 @@ function CorpoPost(props) {
     const imgCurtidas = `assets/img/${props.nomeCurtidas}.svg`;
     const [salvar, setSalvar] = React.useState("bookmark-outline");
     const [curtir, setCurtir] = React.useState("heart-outline");
+    const [animacao, setAnimacao] = React.useState("");
 
     function salvarPost() {
         if (salvar === "bookmark") {
@@ -22,10 +23,19 @@ function CorpoPost(props) {
         }
     }
 
+    function doubleClickLike(){
+        if(curtir === "heart-outline"){
+            setCurtir("heart");
+            setAnimacao("clicked");
+            setTimeout(() => { setAnimacao(""); }, 500);
+        }
+    }
+
     return (
         <>
             <div class="conteudo">
-                <img src={imgPost} alt={props.conteudo} data-test="post-image" onDoubleClick={() => {if(curtir === "heart-outline") setCurtir("heart")}}/>
+                <img src={imgPost} alt={props.conteudo} data-test="post-image" onDoubleClick={doubleClickLike}/>
+                <ion-icon class={animacao} name="heart"></ion-icon>
             </div>
             <div class="fundo">
                 <div class="acoes">
