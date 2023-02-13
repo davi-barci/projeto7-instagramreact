@@ -51,16 +51,16 @@ function CorpoPost(props) {
                 <div className="curtidas">
                     <img src={imgCurtidas} alt={props.nomeCurtidas} />
                     <div className="texto">
-                        Curtido por <strong>{props.nomeCurtidas}</strong> e 
-                        <strong> outras <strong data-test="likes-number">{(curtir === "heart") ? (props.qtdCurtidas+1).toLocaleString("pt-br") 
+                        Curtido por <strong>{props.nomeCurtidas}</strong> e
+                        <strong> outras <strong data-test="likes-number">{(curtir === "heart") ? (props.qtdCurtidas+1).toLocaleString("pt-br")
                         : props.qtdCurtidas.toLocaleString("pt-br") }
                         </strong> pessoas</strong>
                     </div>
                 </div>
             </div>
         </>
-    )
-};
+    );
+}
 
 function Topo(props) {
     const imgPerfil = `assets/img/${props.nomePerfil}.svg`;
@@ -75,8 +75,8 @@ function Topo(props) {
                 <ion-icon name="ellipsis-horizontal"></ion-icon>
             </div>
         </div>
-    )
-};
+    );
+}
 
 export default function Post(props) {
     return (
@@ -84,5 +84,5 @@ export default function Post(props) {
             <Topo nomePerfil={props.nomePerfil} />
             <CorpoPost conteudo={props.conteudo} nomeCurtidas={props.nomeCurtidas} qtdCurtidas={props.qtdCurtidas} />
         </div>
-    )
-};
+    );
+}

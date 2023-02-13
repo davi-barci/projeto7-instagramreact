@@ -6,8 +6,8 @@ function Titulo() {
             Sugestões para você
             <div>Ver tudo</div>
         </div>
-    )
-};
+    );
+}
 
 export default function Sugestoes() {
     const infoSugestoes = [
@@ -25,5 +25,5 @@ export default function Sugestoes() {
                 <Sugestao nome={elem.nome} imagem={elem.imagem} razao={elem.razao} />
             )}
         </div>
-    )
-};
+    );
+}

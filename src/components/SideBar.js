@@ -6,8 +6,8 @@ function Copyright() {
         <div className="copyright">
             © 2021 INSTAGRAM DO FACEBOOK
         </div>
-    )
-};
+    );
+}
 
 function Links() {
     return (
@@ -15,8 +15,8 @@ function Links() {
             Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos • Localizações • Contas mais relevantes •
             Hashtags • Idioma
         </div>
-    )
-};
+    );
+}
 
 export default function SideBar() {
     return (
@@ -26,5 +26,5 @@ export default function SideBar() {
             <Links/>
             <Copyright/>
         </div>
-    )
-};
+    );
+}

@@ -5,8 +5,8 @@ function Setinha(){
         <div className="setinha">
           <ion-icon name="chevron-forward-circle"></ion-icon>
         </div>
-    )
-};
+    );
+}
 
 export default function Stories() {
     const infoStories = [
@@ -27,5 +27,5 @@ export default function Stories() {
             )}
             <Setinha/>
         </div>
-    )
-};
+    );
+}

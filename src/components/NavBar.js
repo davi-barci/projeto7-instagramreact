@@ -1,8 +1,10 @@
 function IconesMobile() {
-    <div class="icones-mobile">
-        <ion-icon name="paper-plane-outline"></ion-icon>
-    </div>
-};
+    return (
+        <div class="icones-mobile">
+            <ion-icon name="paper-plane-outline"></ion-icon>
+        </div>
+    );
+}
 
 function Icones() {
     return (
@@ -12,16 +14,16 @@ function Icones() {
             <ion-icon name="heart-outline"></ion-icon>
             <ion-icon name="person-outline"></ion-icon>
         </div>
-    )
-};
+    );
+}
 
 function Pesquisa() {
     return (
         <div className="pesquisa">
             <input type="text" placeholder="Pesquisar" />
         </div>
-    )
-};
+    );
+}
 
 function Logo() {
     return (
@@ -30,8 +32,8 @@ function Logo() {
             <div className="separador"></div>
             <img src="assets/img/logo.png" alt="logo" />
         </div>
-    )
-};
+    );
+}
 
 
 export default function NavBar() {
@@ -44,5 +46,5 @@ export default function NavBar() {
                 <IconesMobile />
             </div>
         </div>
-    )
-};
+    );
+}

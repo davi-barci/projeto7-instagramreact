@@ -8,5 +8,5 @@ export default function Story(props) {
                 {props.nome}
             </div>
         </div>
-    )
-};
+    );
+}

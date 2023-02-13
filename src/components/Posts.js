@@ -16,5 +16,5 @@ export default function Posts() {
                 qtdCurtidas={elem.qtdCurtidas}/>
             )}
         </div>
-    )
-};
+    );
+}
