@@ -3,28 +3,28 @@ import Usuario from "./Usuario";
 
 function Copyright() {
     return (
-        <div class="copyright">
+        <div className="copyright">
             © 2021 INSTAGRAM DO FACEBOOK
         </div>
     )
-}
+};
 
 function Links() {
     return (
-        <div class="links">
+        <div className="links">
             Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos • Localizações • Contas mais relevantes •
             Hashtags • Idioma
         </div>
     )
-}
+};
 
 export default function SideBar() {
     return (
-        <div class="sidebar">
+        <div className="sidebar">
             <Usuario />
             <Sugestoes />
             <Links/>
             <Copyright/>
         </div>
     )
-}
+};

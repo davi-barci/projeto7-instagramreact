@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 function CorpoPost(props) {
     const imgPost = `assets/img/${props.conteudo}.png`;
@@ -33,12 +33,12 @@ function CorpoPost(props) {
 
     return (
         <>
-            <div class="conteudo">
+            <div className="conteudo">
                 <img src={imgPost} alt={props.conteudo} data-test="post-image" onDoubleClick={doubleClickLike}/>
-                <ion-icon class={animacao} name="heart"></ion-icon>
+                <ion-icon class={animacao} name="heart" onDoubleClick={doubleClickLike}></ion-icon>
             </div>
-            <div class="fundo">
-                <div class="acoes">
+            <div className="fundo">
+                <div className="acoes">
                     <div>
                         <ion-icon name={curtir} data-test="like-post" onClick={curtirPost} color={(curtir === "heart") ? "danger" : "dark"}></ion-icon>
                         <ion-icon name="chatbubble-outline"></ion-icon>
@@ -48,38 +48,41 @@ function CorpoPost(props) {
                         <ion-icon data-test="save-post" name={salvar} onClick={salvarPost}></ion-icon>
                     </div>
                 </div>
-                <div class="curtidas">
+                <div className="curtidas">
                     <img src={imgCurtidas} alt={props.nomeCurtidas} />
-                    <div class="texto">
-                        Curtido por <strong>{props.nomeCurtidas}</strong> e <strong>outras <strong data-test="likes-number">{(curtir === "heart") ? (props.qtdCurtidas+1).toLocaleString("pt-br") : props.qtdCurtidas.toLocaleString("pt-br") }</strong> pessoas</strong>
+                    <div className="texto">
+                        Curtido por <strong>{props.nomeCurtidas}</strong> e 
+                        <strong> outras <strong data-test="likes-number">{(curtir === "heart") ? (props.qtdCurtidas+1).toLocaleString("pt-br") 
+                        : props.qtdCurtidas.toLocaleString("pt-br") }
+                        </strong> pessoas</strong>
                     </div>
                 </div>
             </div>
         </>
     )
-}
+};
 
 function Topo(props) {
     const imgPerfil = `assets/img/${props.nomePerfil}.svg`;
 
     return (
-        <div class="topo">
-            <div class="usuario">
+        <div className="topo">
+            <div className="usuario">
                 <img src={imgPerfil} alt={props.nomePerfil} />
                 {props.nomePerfil}
             </div>
-            <div class="acoes">
+            <div className="acoes">
                 <ion-icon name="ellipsis-horizontal"></ion-icon>
             </div>
         </div>
     )
-}
+};
 
 export default function Post(props) {
     return (
-        <div class="post" data-test="post">
+        <div className="post" data-test="post">
             <Topo nomePerfil={props.nomePerfil} />
             <CorpoPost conteudo={props.conteudo} nomeCurtidas={props.nomeCurtidas} qtdCurtidas={props.qtdCurtidas} />
         </div>
     )
-}
+};

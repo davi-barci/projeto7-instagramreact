@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export default function Usuario() {
     const [nomePerfil, setNomePerfil] = React.useState("catanacomics");
@@ -21,9 +21,9 @@ export default function Usuario() {
     }
 
     return (
-        <div class="usuario">
+        <div className="usuario">
             <img src={fotoPerfil} alt="imagem de perfil" onClick={changeImage} data-test="profile-image"/>
-            <div class="texto">
+            <div className="texto">
                 <span>
                     <strong data-test="name">{nomePerfil}</strong>
                     <ion-icon name="pencil" onClick={changeName} data-test="edit-name"></ion-icon>
@@ -31,4 +31,4 @@ export default function Usuario() {
             </div>
         </div>
     )
-}
+};

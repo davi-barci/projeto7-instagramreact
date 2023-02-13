@@ -2,11 +2,11 @@ import Story from "./Story";
 
 function Setinha(){
     return (
-        <div class="setinha">
+        <div className="setinha">
           <ion-icon name="chevron-forward-circle"></ion-icon>
         </div>
     )
-}
+};
 
 export default function Stories() {
     const infoStories = [
@@ -18,14 +18,14 @@ export default function Stories() {
         { nome: "respondeai", imagem: "assets/img/respondeai.svg"},
         { nome: "filomoderna", imagem: "assets/img/filomoderna.svg"},
         { nome: "memeriagourmet", imagem: "assets/img/memeriagourmet.svg"}
-    ]
+    ];
 
     return (
-        <div class="stories">
-            {infoStories.map((elem) => 
+        <div className="stories">
+            {infoStories.map((elem) =>
                 <Story nome={elem.nome} imagem={elem.imagem} />
             )}
             <Setinha/>
         </div>
     )
-}
+};

@@ -2,7 +2,7 @@ function IconesMobile() {
     <div class="icones-mobile">
         <ion-icon name="paper-plane-outline"></ion-icon>
     </div>
-}
+};
 
 function Icones() {
     return (
@@ -13,31 +13,31 @@ function Icones() {
             <ion-icon name="person-outline"></ion-icon>
         </div>
     )
-}
+};
 
 function Pesquisa() {
     return (
-        <div class="pesquisa">
+        <div className="pesquisa">
             <input type="text" placeholder="Pesquisar" />
         </div>
     )
-}
+};
 
 function Logo() {
     return (
-        <div class="logo">
+        <div className="logo">
             <ion-icon name="logo-instagram"></ion-icon>
-            <div class="separador"></div>
+            <div className="separador"></div>
             <img src="assets/img/logo.png" alt="logo" />
         </div>
     )
-}
+};
 
 
 export default function NavBar() {
     return (
-        <div class="navbar">
-            <div class="container">
+        <div className="navbar">
+            <div className="container">
                 <Logo />
                 <Pesquisa />
                 <Icones />
@@ -45,4 +45,4 @@ export default function NavBar() {
             </div>
         </div>
     )
-}
+};
