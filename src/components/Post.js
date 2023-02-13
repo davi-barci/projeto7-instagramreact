@@ -25,7 +25,7 @@ function CorpoPost(props) {
     return (
         <>
             <div class="conteudo">
-                <img src={imgPost} alt={props.conteudo} data-test="post-image" onClick={() => {if(curtir === "heart-outline") setCurtir("heart")}}/>
+                <img src={imgPost} alt={props.conteudo} data-test="post-image" onDoubleClick={() => {if(curtir === "heart-outline") setCurtir("heart")}}/>
             </div>
             <div class="fundo">
                 <div class="acoes">
